@@ -7,8 +7,8 @@
 #include "hardware/adc.h"
 #include "string.h"
 
-#include "nanopb/pb_encode.h"
-#include "nanopb/pb_decode.h"
+#include <pb_encode.h>
+#include <pb_decode.h>
 #include "nanopb/message.pb.h"
 
 static QueueHandle_t xQueue = NULL;

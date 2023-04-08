@@ -4,7 +4,7 @@
             "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/ProjectFiles/nanopb"
+                "${workspaceFolder}/nanopb"
             ],
             "defines": [],
             "macFrameworkPath": [
