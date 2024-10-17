@@ -10,18 +10,17 @@
 #include <pb_encode.h>
 #include <pb_decode.h>
 #include "nanopb/message.pb.h"
-
 #include "nanocobs/cobs.h"
 
 static QueueHandle_t xQueue = NULL;
 
-#define UART_ID uart1
+#define UART_ID uart0
 #define BAUD_RATE 115200
 #define DATA_BITS 8
 #define STOP_BITS 1
 #define PARITY    UART_PARITY_NONE
-#define UART_TX_PIN 4 // pin 6
-#define UART_RX_PIN 5 // pin 7
+#define UART_TX_PIN 0 // pin 6
+#define UART_RX_PIN 1 // pin 7
 
 void adc_task(void *pvParameters)
 {   
@@ -58,14 +57,13 @@ int prep_buf(uint value, uint8_t* buf, size_t buf_len, size_t* bytes_written)
     message.potentiometer = value;
     message.generator = 3;
 
-    printf("Size of buf: %u\n", buf_len);
-
     // Encode the message
     pb_ostream_t stream = pb_ostream_from_buffer(buf, buf_len);
     if (!pb_encode(&stream, DataPackage_fields, &message)) {
-        printf("Error: %s\n", PB_GET_ERROR(&stream));
+        // printf("Error: %s\n", PB_GET_ERROR(&stream));
         return 0;
     }
+    
     *bytes_written = stream.bytes_written;
     
     return 1;
@@ -97,27 +95,27 @@ void telemetry_task(void *pvParameters)
 
     while(1){
         xQueueReceive(xQueue, &uiRecievedValue, portMAX_DELAY);
-        printf("%s %u \n", "uiRecievedValue =", uiRecievedValue); // this would utilize built-in console
+        // printf("%s %u \n", "uiRecievedValue =", uiRecievedValue); // this would utilize built-in console
         
         // Encode message as binary using protobuf
         prep_buf(uiRecievedValue, bufferA, bufferA_length, &bytes_written);
 
         // Strip zeros
-        cobs_ret_t cobs_ret = cobs_encode(bufferA, bufferA_length, bufferB, bufferB_length, &bytes_written);
+        cobs_ret_t cobs_ret = cobs_encode(bufferA, bytes_written, bufferB, bufferB_length, &bytes_written);
 
         switch (cobs_ret) {
             case COBS_RET_SUCCESS:
-            printf("cobs encode successful. sending...");
+            // printf("cobs encode successful. sending...\n");
             uart_write_blocking(UART_ID, bufferB, bytes_written);   // Send the data
             uart_putc(UART_ID, 0x00);                               // Send termination symbol
             break;
 
             case COBS_RET_ERR_BAD_ARG:
-            printf("cobs error bad arg");
+            // printf("cobs error bad arg\n");
             break;
 
             case COBS_RET_ERR_EXHAUSTED:
-            printf("cobs buffer overflow error");
+            // printf("cobs buffer overflow error\n");
             break;
         }
     }
