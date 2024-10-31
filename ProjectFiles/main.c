@@ -10,6 +10,7 @@
 #include <pb_encode.h>
 #include <pb_decode.h>
 #include "nanopb/message.pb.h"
+
 #include "nanocobs/cobs.h"
 
 static QueueHandle_t xQueue = NULL;
@@ -106,8 +107,9 @@ void telemetry_task(void *pvParameters)
         switch (cobs_ret) {
             case COBS_RET_SUCCESS:
             // printf("cobs encode successful. sending...\n");
+            // printf(bufferB);
             uart_write_blocking(UART_ID, bufferB, bytes_written);   // Send the data
-            uart_putc(UART_ID, 0x00);                               // Send termination symbol
+            // uart_putc(UART_ID, 0x0);                               // Send termination symbol
             break;
 
             case COBS_RET_ERR_BAD_ARG:
@@ -129,6 +131,9 @@ int main()
 
     xTaskCreate(adc_task, "ADC_Task", 256, NULL, 1, NULL);
     xTaskCreate(telemetry_task, "telemetry_Task", 256, NULL, 1, NULL);
+    // recieve commands
+    // send CAN messages
+    // recieve CAN messages
     
     vTaskStartScheduler();
 
