@@ -2,10 +2,11 @@
 #include <task.h>
 #include <stdio.h>
 #include <queue.h>
+#include <string.h>
+
 #include "pico/stdlib.h"
 #include "hardware/gpio.h"
 #include "hardware/adc.h"
-#include "string.h"
 
 #include <pb_encode.h>
 #include <pb_decode.h>
@@ -15,11 +16,11 @@
 
 static QueueHandle_t xQueue = NULL;
 
-#define UART_ID uart0
-#define BAUD_RATE 115200
-#define DATA_BITS 8
-#define STOP_BITS 1
-#define PARITY    UART_PARITY_NONE
+#define UART_ID     uart0
+#define BAUD_RATE   115200
+#define DATA_BITS   8
+#define STOP_BITS   1
+#define PARITY      UART_PARITY_NONE
 #define UART_TX_PIN 0 // pin 6
 #define UART_RX_PIN 1 // pin 7
 
@@ -73,7 +74,7 @@ int prep_buf(uint value, uint8_t* buf, size_t buf_len, size_t* bytes_written)
 void telemetry_task(void *pvParameters)
 {
     // Initialize the message structure
-    DataPackage message = DataPackage_init_default;
+    // DataPackage message = DataPackage_init_default;
 
     // Init static vars for comms
     uint uiRecievedValue;
@@ -118,6 +119,9 @@ void telemetry_task(void *pvParameters)
 
             case COBS_RET_ERR_EXHAUSTED:
             // printf("cobs buffer overflow error\n");
+            break;
+            default:
+            // printf("cobs error\n");
             break;
         }
     }

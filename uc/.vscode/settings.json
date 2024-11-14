@@ -17,4 +17,12 @@
         }
     },
     "cmake.buildBeforeRun": true,
+    "cmake.buildTask": false,
+    "C_Cpp.default.includePath": [
+        "${default}"
+    ],
+    "files.associations": {
+        "message.pb.h": "c",
+        "stdlib.h": "c"
+    },
 }

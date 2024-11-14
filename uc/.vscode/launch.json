@@ -48,6 +48,7 @@
             "cwd": "${workspaceRoot}",
             "executable": "${workspaceRoot}/build/ProjectFiles/blink.elf", // replace with your executable
             "preLaunchTask": "CMake: build", // using stm32-for-vscode extension, this is the build task
+            // "preLaunchTask": "mycmakebuildtask",
             "interface": "swd",
             "device": "Raspberry RP2040 M0+",
             "BMPGDBSerialPort": "/dev/cu.usbmodem97B6B71B1", // Use whatever serial port makes sense for your OS and BMP setup
@@ -56,7 +57,7 @@
                 "enabled": false,
                 "samplesPerSecond": 10
             },
-            // "preLaunchCommands": ["monitor tpwr enable"],
+            // "preLaunchCommands": ["./venv/bin/activate"],
         }
     ]
 }
