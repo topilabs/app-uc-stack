@@ -11,12 +11,14 @@ Protobuf message contained in ProjectFiles/nanopb/message.proto
 Install nanopb, then cd into this project directory (where this readme file is) and run
 
 `% /Users/ikellymo/pico/nanopb-0.4.7-macosx-x86/generator/nanopb_generator.py ProjectFiles/nanopb/message.proto`
-
 `% Writing to ProjectFiles/nanopb/message.pb.h and ProjectFiles/nanopb/message.pb.c`
 
-move the blink.uf2 file over to the pico. 
-
 ## Todo
+- Get "Build", "Debug" and "Launch" buttons working in VSCode. 
+- Move JS project over into this repo so that comm's can be managed together. 
+- Add freeRTOS-Plus-IO to the project.
+- Rename project
+- Clean-up CMakeLists.txt files
+- Get rid of PATH variable dependencies in CMakeLists.txt files
 
-- Get the debugger/flasher working on the pico, with another pico
-- implement cobs encoding/decoding that actually works.
+
