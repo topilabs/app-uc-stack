@@ -1,3 +1,3 @@
 [submodule "freertos/FreeRTOS-Kernel"]
-	path = uc/freertos/FreeRTOS-Kernel
+	path = device/freertos/FreeRTOS-Kernel
 	url = https://github.com/FreeRTOS/FreeRTOS-Kernel
