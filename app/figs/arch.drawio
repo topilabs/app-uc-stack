@@ -1,0 +1,214 @@
+<mxfile host="Electron" modified="2024-07-31T05:14:35.585Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.6.4 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="bLEasdmjLedSH7r5Neio" version="24.6.4" type="device" pages="3">
+  <diagram name="Local Broker" id="eYb_x5AXYJb9zGZxbyUn">
+    <mxGraphModel dx="954" dy="632" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="adslZr9v6oB7gxRPS_Cj-0" />
+        <mxCell id="adslZr9v6oB7gxRPS_Cj-1" parent="adslZr9v6oB7gxRPS_Cj-0" />
+        <mxCell id="adslZr9v6oB7gxRPS_Cj-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;strokeWidth=1;" vertex="1" parent="adslZr9v6oB7gxRPS_Cj-1">
+          <mxGeometry x="410" y="240" width="480" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="r2i1147qxnAw7G_uYexg-6" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="adslZr9v6oB7gxRPS_Cj-1" source="adslZr9v6oB7gxRPS_Cj-3" target="adslZr9v6oB7gxRPS_Cj-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="650" y="660" />
+              <mxPoint x="650" y="388" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="adslZr9v6oB7gxRPS_Cj-3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;strokeWidth=1;" vertex="1" parent="adslZr9v6oB7gxRPS_Cj-1">
+          <mxGeometry x="10" y="240" width="220" height="550" as="geometry" />
+        </mxCell>
+        <mxCell id="adslZr9v6oB7gxRPS_Cj-4" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=classic;startFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="adslZr9v6oB7gxRPS_Cj-1" source="adslZr9v6oB7gxRPS_Cj-5" target="adslZr9v6oB7gxRPS_Cj-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="adslZr9v6oB7gxRPS_Cj-5" value="&lt;div&gt;GUI for command &amp;amp;&amp;nbsp;&lt;/div&gt;&lt;div&gt;real-time visualization. Pulls HTML from localhost, points to remote for websocket.&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#66ff66&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#66ff66&quot;&gt;Tech:&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#66ff66&quot;&gt;js&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#66ff66&quot;&gt;react&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#66ff66&quot;&gt;vite&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=4;" vertex="1" parent="adslZr9v6oB7gxRPS_Cj-1">
+          <mxGeometry x="30" y="320" width="180" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="adslZr9v6oB7gxRPS_Cj-6" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fillColor=#fad9d5;strokeColor=#ae4132;" edge="1" parent="adslZr9v6oB7gxRPS_Cj-1" source="adslZr9v6oB7gxRPS_Cj-5" target="adslZr9v6oB7gxRPS_Cj-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="adslZr9v6oB7gxRPS_Cj-7" value="Vite dev server: &lt;br&gt;Localhost / port 3000&lt;br&gt;&lt;div&gt;Hosts react client code that executes in browser.&amp;nbsp;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;arcSize=4;" vertex="1" parent="adslZr9v6oB7gxRPS_Cj-1">
+          <mxGeometry x="30" y="520" width="180" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="adslZr9v6oB7gxRPS_Cj-9" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font color=&quot;#66ff66&quot;&gt;balena.io for device management&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=3;fillColor=none;strokeColor=#ae4132;" vertex="1" parent="adslZr9v6oB7gxRPS_Cj-1">
+          <mxGeometry x="430" y="282.5" width="190" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="adslZr9v6oB7gxRPS_Cj-10" value="Real-time, deterministic, hardware application. DAC, ADC, Timers, Counters etc...&amp;nbsp;&lt;div&gt;&lt;div&gt;&lt;font color=&quot;#66ff66&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#66ff66&quot;&gt;Tech:&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#66ff66&quot;&gt;C&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;font color=&quot;#66ff66&quot;&gt;&amp;nbsp;FreeRTOS&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#66ff66&quot;&gt;nanopb&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;" vertex="1" parent="adslZr9v6oB7gxRPS_Cj-1">
+          <mxGeometry x="725" y="317.5" width="145" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="adslZr9v6oB7gxRPS_Cj-11" value="http" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="adslZr9v6oB7gxRPS_Cj-1">
+          <mxGeometry x="70" y="470" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="adslZr9v6oB7gxRPS_Cj-12" value="serial/UART&lt;br&gt;protobuf&lt;br&gt;COBS&lt;div&gt;&lt;font color=&quot;#ff0000&quot;&gt;3Mbps&lt;/font&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="adslZr9v6oB7gxRPS_Cj-1">
+          <mxGeometry x="540" y="620" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="adslZr9v6oB7gxRPS_Cj-13" value="http&lt;br&gt;websocket&lt;div&gt;&lt;font color=&quot;#ff0000&quot;&gt;100Mbps&lt;/font&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="adslZr9v6oB7gxRPS_Cj-1">
+          <mxGeometry x="290" y="330" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="adslZr9v6oB7gxRPS_Cj-14" value="Mac/Windows/Linux&lt;div&gt;Browser&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#99CCFF;" vertex="1" parent="adslZr9v6oB7gxRPS_Cj-1">
+          <mxGeometry x="65" y="280" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="adslZr9v6oB7gxRPS_Cj-15" value="Raspberry Pi" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#99CCFF;" vertex="1" parent="adslZr9v6oB7gxRPS_Cj-1">
+          <mxGeometry x="465" y="252.5" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="adslZr9v6oB7gxRPS_Cj-16" value="RPi 2040 or&amp;nbsp;&lt;div&gt;STM32&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#99CCFF;" vertex="1" parent="adslZr9v6oB7gxRPS_Cj-1">
+          <mxGeometry x="735" y="280" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="adslZr9v6oB7gxRPS_Cj-17" value="PC" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#5773FF;" vertex="1" parent="adslZr9v6oB7gxRPS_Cj-1">
+          <mxGeometry x="105" y="240" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="adslZr9v6oB7gxRPS_Cj-18" value="Custom Hardware" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#5773FF;" vertex="1" parent="adslZr9v6oB7gxRPS_Cj-1">
+          <mxGeometry x="582.5" y="240" width="135" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="r2i1147qxnAw7G_uYexg-4" value="&lt;span style=&quot;font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&quot; web broker service&quot; translates serial protobuf to websocket, can also host web app but harder to deploy to remote than local. Think of this as service.&lt;/span&gt;&lt;div style=&quot;forced-color-adjust: none; border-color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;font style=&quot;forced-color-adjust: none; border-color: rgb(0, 0, 0);&quot;&gt;&lt;br style=&quot;forced-color-adjust: none; border-color: rgb(0, 0, 0);&quot;&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; border-color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;font style=&quot;forced-color-adjust: none; border-color: rgb(0, 0, 0);&quot;&gt;Tech:&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; border-color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;font style=&quot;forced-color-adjust: none; border-color: rgb(0, 0, 0);&quot;&gt;js&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; border-color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;font style=&quot;forced-color-adjust: none; border-color: rgb(0, 0, 0);&quot;&gt;express server&lt;br style=&quot;forced-color-adjust: none; border-color: rgb(0, 0, 0);&quot;&gt;socket io&lt;br style=&quot;forced-color-adjust: none; border-color: rgb(0, 0, 0);&quot;&gt;serialport&lt;/font&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;rounded=1;strokeColor=#ae4132;arcSize=4;fillColor=none;fontColor=#878787;" vertex="1" parent="adslZr9v6oB7gxRPS_Cj-1">
+          <mxGeometry x="440" y="290" width="170" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="r2i1147qxnAw7G_uYexg-5" value="&lt;span style=&quot;color: rgb(240, 240, 240); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&quot; web broker service&quot; translates serial protobuf to websocket, can also host web app but harder to deploy to remote than local. Think of this as service.&lt;/span&gt;&lt;div style=&quot;forced-color-adjust: none; border-color: rgb(0, 0, 0); color: rgb(240, 240, 240); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;font color=&quot;#66ff66&quot; style=&quot;forced-color-adjust: none; border-color: rgb(0, 0, 0);&quot;&gt;&lt;br style=&quot;forced-color-adjust: none; border-color: rgb(0, 0, 0);&quot;&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; border-color: rgb(0, 0, 0); color: rgb(240, 240, 240); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;font color=&quot;#66ff66&quot; style=&quot;forced-color-adjust: none; border-color: rgb(0, 0, 0);&quot;&gt;Tech:&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; border-color: rgb(0, 0, 0); color: rgb(240, 240, 240); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;font color=&quot;#66ff66&quot; style=&quot;forced-color-adjust: none; border-color: rgb(0, 0, 0);&quot;&gt;js&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; border-color: rgb(0, 0, 0); color: rgb(240, 240, 240); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;font color=&quot;#66ff66&quot; style=&quot;forced-color-adjust: none; border-color: rgb(0, 0, 0);&quot;&gt;express server&lt;br style=&quot;forced-color-adjust: none; border-color: rgb(0, 0, 0);&quot;&gt;socket io&lt;br style=&quot;forced-color-adjust: none; border-color: rgb(0, 0, 0);&quot;&gt;serialport&lt;/font&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;rounded=1;strokeColor=default;arcSize=4;" vertex="1" parent="adslZr9v6oB7gxRPS_Cj-1">
+          <mxGeometry x="35" y="590" width="170" height="170" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Remote Broker" id="DcgTCHGoTCZ_bGuLMSOs">
+    <mxGraphModel dx="1060" dy="702" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="t9I8cbG9gUBwhmLmCOD1-0" />
+        <mxCell id="t9I8cbG9gUBwhmLmCOD1-1" parent="t9I8cbG9gUBwhmLmCOD1-0" />
+        <mxCell id="jtbnzkwU1MSxoJBvwaWR-30" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;strokeWidth=1;" vertex="1" parent="t9I8cbG9gUBwhmLmCOD1-1">
+          <mxGeometry x="410" y="240" width="480" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="jtbnzkwU1MSxoJBvwaWR-29" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;strokeWidth=1;" vertex="1" parent="t9I8cbG9gUBwhmLmCOD1-1">
+          <mxGeometry x="10" y="240" width="220" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="jtbnzkwU1MSxoJBvwaWR-2" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=classic;startFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="t9I8cbG9gUBwhmLmCOD1-1" source="jtbnzkwU1MSxoJBvwaWR-3" target="jtbnzkwU1MSxoJBvwaWR-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jtbnzkwU1MSxoJBvwaWR-3" value="&lt;div&gt;GUI for command &amp;amp;&amp;nbsp;&lt;/div&gt;&lt;div&gt;real-time visualization. Pulls HTML from localhost, points to remote for websocket.&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#66ff66&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#66ff66&quot;&gt;Tech:&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#66ff66&quot;&gt;js&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#66ff66&quot;&gt;react&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#66ff66&quot;&gt;vite&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="t9I8cbG9gUBwhmLmCOD1-1">
+          <mxGeometry x="30" y="320" width="180" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="jtbnzkwU1MSxoJBvwaWR-4" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="t9I8cbG9gUBwhmLmCOD1-1" source="jtbnzkwU1MSxoJBvwaWR-3" target="jtbnzkwU1MSxoJBvwaWR-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jtbnzkwU1MSxoJBvwaWR-5" value="Vite dev server: &lt;br&gt;Localhost / port 3000&lt;br&gt;&lt;div&gt;Hosts react client code that executes in browser.&amp;nbsp;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="t9I8cbG9gUBwhmLmCOD1-1">
+          <mxGeometry x="30" y="520" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="jtbnzkwU1MSxoJBvwaWR-6" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;" edge="1" parent="t9I8cbG9gUBwhmLmCOD1-1" source="jtbnzkwU1MSxoJBvwaWR-7" target="jtbnzkwU1MSxoJBvwaWR-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jtbnzkwU1MSxoJBvwaWR-7" value="&quot; web broker &quot; translates serial protobuf to websocket, can also host web app but harder to deploy to remote than local. Think of this as service.&lt;div&gt;&lt;font color=&quot;#66ff66&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#66ff66&quot;&gt;Tech:&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#66ff66&quot;&gt;js&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#66ff66&quot;&gt;express server&lt;br&gt;socket io&lt;br&gt;serialport&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#66ff66&quot;&gt;balena.io for device management&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="t9I8cbG9gUBwhmLmCOD1-1">
+          <mxGeometry x="430" y="297.5" width="180" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="jtbnzkwU1MSxoJBvwaWR-8" value="Real-time, deterministic, hardware application. DAC, ADC, Timers, Counters etc...&amp;nbsp;&lt;div&gt;&lt;div&gt;&lt;font color=&quot;#66ff66&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#66ff66&quot;&gt;Tech:&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#66ff66&quot;&gt;C&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;font color=&quot;#66ff66&quot;&gt;&amp;nbsp;FreeRTOS&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#66ff66&quot;&gt;nanopb&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="t9I8cbG9gUBwhmLmCOD1-1">
+          <mxGeometry x="725" y="317.5" width="145" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="jtbnzkwU1MSxoJBvwaWR-13" value="http" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="t9I8cbG9gUBwhmLmCOD1-1">
+          <mxGeometry x="70" y="470" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jtbnzkwU1MSxoJBvwaWR-14" value="serial/UART&lt;br&gt;protobuf&lt;br&gt;COBS&lt;div&gt;&lt;font color=&quot;#ff0000&quot;&gt;3Mbps&lt;/font&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="t9I8cbG9gUBwhmLmCOD1-1">
+          <mxGeometry x="640" y="300" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="jtbnzkwU1MSxoJBvwaWR-15" value="http&lt;br&gt;websocket&lt;div&gt;&lt;font color=&quot;#ff0000&quot;&gt;100Mbps&lt;/font&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="t9I8cbG9gUBwhmLmCOD1-1">
+          <mxGeometry x="290" y="310" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jtbnzkwU1MSxoJBvwaWR-20" value="Mac/Windows/Linux&lt;div&gt;Browser&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#99CCFF;" vertex="1" parent="t9I8cbG9gUBwhmLmCOD1-1">
+          <mxGeometry x="65" y="280" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jtbnzkwU1MSxoJBvwaWR-21" value="Raspberry Pi" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#99CCFF;" vertex="1" parent="t9I8cbG9gUBwhmLmCOD1-1">
+          <mxGeometry x="465" y="267.5" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jtbnzkwU1MSxoJBvwaWR-22" value="RPi 2040 or&amp;nbsp;&lt;div&gt;STM32&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#99CCFF;" vertex="1" parent="t9I8cbG9gUBwhmLmCOD1-1">
+          <mxGeometry x="735" y="280" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jtbnzkwU1MSxoJBvwaWR-25" value="PC" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#5773FF;" vertex="1" parent="t9I8cbG9gUBwhmLmCOD1-1">
+          <mxGeometry x="105" y="240" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jtbnzkwU1MSxoJBvwaWR-26" value="Custom Hardware" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#5773FF;" vertex="1" parent="t9I8cbG9gUBwhmLmCOD1-1">
+          <mxGeometry x="582.5" y="240" width="135" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jtbnzkwU1MSxoJBvwaWR-31" value="&lt;div&gt;&quot;Cloud&quot; (or other local service)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;Remote logging.&amp;nbsp;&lt;div&gt;Grafana, influx dB, google cloud, etc...&amp;nbsp;&amp;nbsp;&lt;/div&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;strokeColor=#787878;fontColor=#B3B3B3;" vertex="1" parent="t9I8cbG9gUBwhmLmCOD1-1">
+          <mxGeometry x="290" y="550" width="250" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="jtbnzkwU1MSxoJBvwaWR-32" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=classic;startFill=1;exitX=0.625;exitY=0.2;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#787878;endArrow=none;endFill=0;strokeWidth=2;" edge="1" parent="t9I8cbG9gUBwhmLmCOD1-1" source="jtbnzkwU1MSxoJBvwaWR-31" target="jtbnzkwU1MSxoJBvwaWR-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="398" as="sourcePoint" />
+            <mxPoint x="440" y="398" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jtbnzkwU1MSxoJBvwaWR-33" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;startArrow=none;startFill=0;exitX=0.25;exitY=0.25;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#787878;endArrow=classic;endFill=1;strokeWidth=2;" edge="1" parent="t9I8cbG9gUBwhmLmCOD1-1" source="jtbnzkwU1MSxoJBvwaWR-31" target="jtbnzkwU1MSxoJBvwaWR-29">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="380" y="597" as="sourcePoint" />
+            <mxPoint x="443" y="475" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Old" id="cbCOfi5EQ1L6kFQGJ6u_">
+    <mxGraphModel dx="1004" dy="665" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="TvYhxwLJj1P1M-UzkxVO-12" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;fontColor=#999999;strokeColor=#999999;" parent="1" source="TvYhxwLJj1P1M-UzkxVO-1" target="TvYhxwLJj1P1M-UzkxVO-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TvYhxwLJj1P1M-UzkxVO-1" value="react client:&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;vite project" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#999999;strokeColor=#999999;" parent="1" vertex="1">
+          <mxGeometry x="80" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TvYhxwLJj1P1M-UzkxVO-11" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" parent="1" source="TvYhxwLJj1P1M-UzkxVO-2" target="TvYhxwLJj1P1M-UzkxVO-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TvYhxwLJj1P1M-UzkxVO-2" value="react client:&lt;br&gt;vite project" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="80" y="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TvYhxwLJj1P1M-UzkxVO-10" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="TvYhxwLJj1P1M-UzkxVO-2" target="TvYhxwLJj1P1M-UzkxVO-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TvYhxwLJj1P1M-UzkxVO-3" value="Vite dev server: &lt;br&gt;port 3000&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TvYhxwLJj1P1M-UzkxVO-9" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;" parent="1" source="TvYhxwLJj1P1M-UzkxVO-4" target="TvYhxwLJj1P1M-UzkxVO-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TvYhxwLJj1P1M-UzkxVO-4" value="express server&lt;br&gt;socket io&lt;br&gt;serialport" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="480" y="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TvYhxwLJj1P1M-UzkxVO-5" value="uC" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="680" y="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TvYhxwLJj1P1M-UzkxVO-8" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;fontColor=#999999;strokeColor=#999999;" parent="1" source="TvYhxwLJj1P1M-UzkxVO-6" target="TvYhxwLJj1P1M-UzkxVO-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TvYhxwLJj1P1M-UzkxVO-6" value="express server&lt;br&gt;socket io&lt;br&gt;serialport" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#999999;strokeColor=#999999;" parent="1" vertex="1">
+          <mxGeometry x="480" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TvYhxwLJj1P1M-UzkxVO-7" value="uC" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#999999;strokeColor=#999999;" parent="1" vertex="1">
+          <mxGeometry x="680" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TvYhxwLJj1P1M-UzkxVO-14" value="http&lt;br&gt;websocket" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#999999;" parent="1" vertex="1">
+          <mxGeometry x="310" y="130" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TvYhxwLJj1P1M-UzkxVO-15" value="http" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="190" y="400" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TvYhxwLJj1P1M-UzkxVO-16" value="serial&lt;br&gt;protobuf&lt;br&gt;COBS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="610" y="310" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TvYhxwLJj1P1M-UzkxVO-17" value="http&lt;br&gt;websocket" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="320" y="320" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TvYhxwLJj1P1M-UzkxVO-18" value="serial&lt;br&gt;protobuf&lt;br&gt;COBS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#999999;" parent="1" vertex="1">
+          <mxGeometry x="610" y="120" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TvYhxwLJj1P1M-UzkxVO-19" value="Production" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontColor=#999999;" parent="1" vertex="1">
+          <mxGeometry x="410" y="70" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TvYhxwLJj1P1M-UzkxVO-20" value="Development" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="410" y="260" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TvYhxwLJj1P1M-UzkxVO-21" value="&lt;b&gt;serialport&amp;nbsp;&lt;/b&gt;&lt;br&gt;connection meta info&lt;br&gt;- port path&lt;br&gt;- protobuf file path&lt;br&gt;&lt;br&gt;data" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;align=left;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="480" y="400" width="120" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
