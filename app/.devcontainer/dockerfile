@@ -1,0 +1,6 @@
+FROM mcr.microsoft.com/devcontainers/javascript-node:22-bookworm
+WORKDIR /app
+EXPOSE 5173
+EXPOSE 3000 
+
+

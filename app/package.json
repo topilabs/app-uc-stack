@@ -1,12 +1,15 @@
 {
-  "name": "PortalApp",
+  "name": "app",
   "version": "1.0.0",
   "scripts": {
     "start": "concurrently -n \"server,client\" -c \"bgBlue,bgCyan\" \"cd ./server && npm run server\" \"cd ./client && npm run dev\"",
     "test": "jest"
   },
   "dependencies": {
-    "concurrently": "^7.0.0"
+    "concurrently": "^7.0.0",
+    "nodemon": "3.1.9",
+    "server": "server/",
+    "client": "client/"
   },
   "devDependencies": {
     "jest": "^29.7.0"
