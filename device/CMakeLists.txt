@@ -1,10 +1,7 @@
-cmake_minimum_required(VERSION 3.12)
+cmake_minimum_required(VERSION 3.13...3.27)
 message('Building Project!!!')
 
-set(PICO_SDK_FETCH_FROM_GIT ON)
-set(PICOTOOL_FETCH_FROM_GIT ON)
-
-include(pico_sdk_import.cmake)
+include(deps/pico-sdk/pico_sdk_import.cmake)
 
 project(Pico-FreeRTOS)
 
