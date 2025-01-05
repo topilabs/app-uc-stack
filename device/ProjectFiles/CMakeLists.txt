@@ -1,6 +1,6 @@
 
 # Initialize nanopb
-set(NANOPB_PATH ${CMAKE_CURRENT_SOURCE_DIR}/nanopb_lib)
+set(NANOPB_PATH ${CMAKE_SOURCE_DIR}/deps/nanopb)
 # Add nanopb headers to include path for pb_encode.h, pb_decode.h, etc.
 include_directories(${NANOPB_PATH})
 
