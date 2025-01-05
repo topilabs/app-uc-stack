@@ -3,8 +3,8 @@
 	url = https://github.com/FreeRTOS/FreeRTOS-Kernel.git
 	branch = 83da5fc
 [submodule "device/deps/nanopb"]
-    path = device/deps/nanopb
-    url = https://github.com/nanopb/nanopb.git
+	path = device/deps/nanopb
+	url = https://github.com/nanopb/nanopb.git
 [submodule "device/deps/pico-sdk"]
-    path = device/deps/pico-sdk
-    url = https://github.com/raspberrypi/pico-sdk.git
+	path = device/deps/pico-sdk
+	url = https://github.com/raspberrypi/pico-sdk.git
