@@ -33,7 +33,7 @@
             "group": {
                 "kind": "build",
                 "isDefault": true
-            },
+            }
         },
         {
             "label": "mycmakebuildtask",
@@ -47,9 +47,17 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "dependsOn": ["activate venv"]
-        }, 
-
+            "dependsOn": [
+                "activate venv"
+            ]
+        },
+        {
+            "type": "cmake",
+            "label": "CMake: clean",
+            "command": "clean",
+            "problemMatcher": [],
+            "detail": "CMake template clean task"
+        }
     ],
     "version": "2.0.0"
 }

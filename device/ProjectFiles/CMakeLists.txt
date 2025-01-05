@@ -1,17 +1,38 @@
 
-#initialize nanopb
-set(CMAKE_MODULE_PATH $ENV{NANOPB_PATH}/extra)
-message("CMAKE_MODULE_PATH="${CMAKE_MODULE_PATH})
-find_package(Nanopb REQUIRED)
-include_directories(${NANOPB_INCLUDE_DIRS})
+# Initialize nanopb
+set(NANOPB_PATH ${CMAKE_CURRENT_SOURCE_DIR}/nanopb_lib)
+# Add nanopb headers to include path for pb_encode.h, pb_decode.h, etc.
+include_directories(${NANOPB_PATH})
 
-#Try to get the protobuf compiler to use the python3 executable in the virtual environment
-set(Python3_ROOT "/Users/ikellymo/pico/rp2040-freertos-nanopb/uc/.venv/bin/python")
-set(PYTHONPATH "/Users/ikellymo/pico/rp2040-freertos-nanopb/uc/.venv/bin/python")
-set(Python3_EXECUTABLE "/Users/ikellymo/pico/rp2040-freertos-nanopb/uc/.venv/bin/python")
-find_package (Python3 COMPONENTS Interpreter)
+# Build nanopb library
+add_library(nanopb
+    ${NANOPB_PATH}/pb_encode.c
+    ${NANOPB_PATH}/pb_decode.c
+    ${NANOPB_PATH}/pb_common.c
+)
+target_include_directories(nanopb PUBLIC ${NANOPB_PATH})
 
-nanopb_generate_cpp(PROTO_SRCS PROTO_HDRS ../../protobuf/message.proto)
+# Create output directory for generated files
+file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/nanopb)
+
+# Run the nanopb_generator binary that was installed by the apt-get command in the docker container. 
+# We are NOT using anything downloaded from the git repo. 
+add_custom_command(
+    OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/nanopb/message.pb.c ${CMAKE_CURRENT_BINARY_DIR}/nanopb/message.pb.h
+    COMMAND python3 
+        /bin/nanopb_generator.py
+        --output-dir=${CMAKE_CURRENT_BINARY_DIR}/nanopb
+        --options-path=/workspaces/app-uc-stack/protocol_spec
+        message.proto # Protocol buffer definition file that defines message structures
+    COMMENT "Generating protocol buffer files"
+)
+
+add_library(proto_messages 
+    ${CMAKE_CURRENT_BINARY_DIR}/nanopb/message.pb.c 
+    ${CMAKE_CURRENT_BINARY_DIR}/nanopb/message.pb.h
+)
+
+target_include_directories(proto_messages PUBLIC ${CMAKE_CURRENT_BINARY_DIR}/nanopb)
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Werror -g -O0")
 
@@ -21,15 +42,15 @@ add_executable(
         blink
         main.c
         nanocobs/cobs.c
-        ${PROTO_SRCS} 
-        ${PROTO_HDRS}
 )
 
 target_link_libraries(
         blink 
         pico_stdlib 
         freertos 
-        hardware_adc 
+        hardware_adc
+        proto_messages
+        nanopb
 )
 
 pico_enable_stdio_usb(blink 0)

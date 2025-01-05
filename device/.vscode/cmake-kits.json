@@ -1,0 +1,12 @@
+[
+  {
+    "name": "GCC ARM",
+    "compilers": {
+      "C": "arm-none-eabi-gcc",
+      "CXX": "arm-none-eabi-g++"
+    },
+    "preferredGenerator": {
+      "name": "Unix Makefiles"
+    }
+  }
+]
