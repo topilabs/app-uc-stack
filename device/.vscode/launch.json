@@ -2,83 +2,6 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "BMP Debug",
-            "type": "cortex-debug",
-            "servertype": "bmp",
-            "request": "launch",
-            "cwd": "${workspaceRoot}",
-            "executable": "${workspaceRoot}/build/ProjectFiles/blink.elf", // replace with your executable
-            "preLaunchTask": "CMake: build", // using stm32-for-vscode extension, this is the build task
-            "interface": "swd",
-            "device": "Raspberry RP2040 M0+",
-            "BMPGDBSerialPort": "/dev/cu.usbmodem97B6B71B1", // Use whatever serial port makes sense for your OS and BMP setup
-            "runToEntryPoint": "main", // runToMain is deprecated.
-            "liveWatch": {
-                "enabled": false,
-                "samplesPerSecond": 10
-            },
-        },
-        {
-            "name": "BMP Debug Remote (Core 0 - External)",
-            "type": "cortex-debug",
-            "servertype": "external",
-            "request": "launch",
-            "cwd": "${workspaceRoot}",
-            "executable": "${workspaceRoot}/build/ProjectFiles/blink.elf",
-            "preLaunchTask": "CMake: build",
-            "interface": "swd",
-            "device": "RP2040",
-            "gdbTarget": "192.168.11.173:2000",
-            "runToEntryPoint": "main",
-            "showDevDebugOutput": "parsed",
-            "armToolchainPath": "/usr/bin",
-            "gdbPath": "/usr/bin/gdb-multiarch",
-            "svdFile": "${env:PICO_SDK_PATH}/src/rp2040/hardware_regs/rp2040.svd",
-            "overrideLaunchCommands": [
-                "monitor tpwr enable",
-                "monitor reset",
-                "monitor swdp_scan",
-                "attach 1", // Attach to core 0 (first core)
-                "set mem inaccessible-by-default off",
-                "load",
-                "break main",
-                "continue"
-            ],
-            "overrideRestartCommands": [
-                "monitor reset"
-            ],
-        },
-        {
-            "name": "BMP Debug Remote (Core 1 - External)",
-            "type": "cortex-debug",
-            "servertype": "external",
-            "request": "launch",
-            "cwd": "${workspaceRoot}",
-            "executable": "${workspaceRoot}/build/ProjectFiles/blink.elf",
-            "preLaunchTask": "CMake: build",
-            "interface": "swd",
-            "device": "RP2040",
-            "gdbTarget": "192.168.11.173:2000",
-            "runToEntryPoint": "main",
-            "showDevDebugOutput": "parsed",
-            "armToolchainPath": "/usr/bin",
-            "gdbPath": "/usr/bin/gdb-multiarch",
-            "svdFile": "${env:PICO_SDK_PATH}/src/rp2040/hardware_regs/rp2040.svd",
-            "overrideLaunchCommands": [
-                "monitor tpwr enable",
-                "monitor reset",
-                "monitor swdp_scan",
-                "attach 2", // Attach to core 1 (second core)
-                "set mem inaccessible-by-default off",
-                "load",
-                "break main",
-                "continue"
-            ],
-            "overrideRestartCommands": [
-                "monitor reset"
-            ],
-        },
-        {
             "name": "BMP Debug Remote (Core 0)",
             "type": "cortex-debug",
             "servertype": "bmp",
@@ -117,16 +40,30 @@
             "targetId": 2, // Specify core 1 (second core)
         },
         {
-            "name": "BMP Attach",
+            "name": "BMP Attach (Core 0)",
             "type": "cortex-debug",
             "servertype": "bmp",
             "request": "attach",
             "cwd": "${workspaceRoot}",
-            "executable": "${workspaceRoot}/build/ProjectFiles/blink.elf", // replace with your executable
+            "executable": "${workspaceRoot}/build/ProjectFiles/blink.elf",
             "interface": "swd",
-            "device": "Raspberry RP2040 M0+",
-            "BMPGDBSerialPort": "/dev/cu.usbmodem97B6B71B1", // Use whatever serial port makes sense for your OS and BMP setup
-            "runToEntryPoint": "main",
+            "device": "RP2040",
+            "BMPGDBSerialPort": "tcp:192.168.11.173:2000", // TCP connection to remote BMP
+            // "powerOverBMP": "enable", // Enable target power
+            "targetId": 1, // Specify core 0 (first core)
+        },
+        {
+            "name": "BMP Attach (Core 1)",
+            "type": "cortex-debug",
+            "servertype": "bmp",
+            "request": "attach",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceRoot}/build/ProjectFiles/blink.elf",
+            "interface": "swd",
+            "device": "RP2040",
+            "BMPGDBSerialPort": "tcp:192.168.11.173:2000", // TCP connection to remote BMP
+            // "powerOverBMP": "enable", // Enable target power
+            "targetId": 2, // Specify core 1 (second core)
         },
     ]
 }
