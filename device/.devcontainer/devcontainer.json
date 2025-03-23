@@ -1,0 +1,20 @@
+{
+    "name": "uc_dev_environment",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "dev-env",
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    "forwardPorts": [2000],
+    "customizations": {
+        // Configure properties specific to VS Code.
+        "vscode": {
+            // Add the IDs of extensions you want installed when the container is created.
+            "extensions": [
+                "mcu-debug.debug-tracker-vscode",
+                "ms-vscode.cpptools-extension-pack",
+                "marus25.cortex-debug",
+                "saoudrizwan.claude-dev",
+                "mhutchie.git-graph"
+            ]
+        }
+    }
+}

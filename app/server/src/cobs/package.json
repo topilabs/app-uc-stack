@@ -1,0 +1,16 @@
+{
+  "name": "cobs",
+  "version": "0.2.1",
+  "description": "Consistent Overhead Byte Stuffing and packet framing implemented in Node.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+  }
+}

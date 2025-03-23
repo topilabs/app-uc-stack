@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message DataPackage {
+  uint32 potentiometer = 1;
+  uint32 generator = 2;
+}

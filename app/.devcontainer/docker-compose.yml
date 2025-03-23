@@ -1,0 +1,20 @@
+services:
+  app:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    network_mode: "host"
+    volumes: 
+      # - /dev:/dev
+      # - /run/udev:/run/udev:ro
+      - ../..:/workspaces:cached
+    # privileged: true
+    ports:
+      - 3000:3000
+      - 5173:5173
+    command: sleep infinity
+    # command: >
+    #   sh -c "npm install &&
+    #          npm start"
+      
+  
