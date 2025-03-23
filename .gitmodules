@@ -8,3 +8,6 @@
 [submodule "device/deps/pico-sdk"]
 	path = device/deps/pico-sdk
 	url = https://github.com/raspberrypi/pico-sdk.git
+[submodule "device/deps/nanocobs"]
+	path = device/deps/nanocobs
+	url = https://github.com/charlesnicholson/nanocobs.git
