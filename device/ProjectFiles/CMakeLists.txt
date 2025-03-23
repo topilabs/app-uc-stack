@@ -36,12 +36,13 @@ target_include_directories(proto_messages PUBLIC ${CMAKE_CURRENT_BINARY_DIR}/nan
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Werror -g -O0")
 
-include_directories(nanocobs)
+# nanocobs is now in deps folder
+include_directories(${CMAKE_SOURCE_DIR}/deps/nanocobs)
 
 add_executable(
         out
         main.c
-        nanocobs/cobs.c
+        ${CMAKE_SOURCE_DIR}/deps/nanocobs/cobs.c
 )
 
 target_link_libraries(
