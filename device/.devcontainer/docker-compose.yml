@@ -1,0 +1,11 @@
+services:
+  dev-env:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    network_mode: "host"
+    volumes: 
+      - ../..:/workspaces:cached
+    ports:
+      - 2000:2000
+    command: sleep infinity

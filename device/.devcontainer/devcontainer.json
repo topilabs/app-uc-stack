@@ -1,8 +1,9 @@
 {
-    "build": {
-        // Path is relative to the devcontainer.json file.
-        "dockerfile": "Dockerfile"
-    },
+    "name": "uc_dev_environment",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "dev-env",
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    "forwardPorts": [2000],
     "customizations": {
         // Configure properties specific to VS Code.
         "vscode": {

@@ -22,7 +22,7 @@ add_custom_command(
     COMMAND python3 
         /bin/nanopb_generator.py
         --output-dir=${CMAKE_CURRENT_BINARY_DIR}/nanopb
-        --options-path=/workspaces/app-uc-stack/protocol_spec
+        --options-path=/workspaces/protocol_spec
         message.proto # Protocol buffer definition file that defines message structures
     COMMENT "Generating protocol buffer files"
 )

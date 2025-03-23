@@ -19,6 +19,104 @@
             },
         },
         {
+            "name": "BMP Debug Remote (Core 0 - External)",
+            "type": "cortex-debug",
+            "servertype": "external",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceRoot}/build/ProjectFiles/blink.elf",
+            "preLaunchTask": "CMake: build",
+            "interface": "swd",
+            "device": "RP2040",
+            "gdbTarget": "192.168.11.173:2000",
+            "runToEntryPoint": "main",
+            "showDevDebugOutput": "parsed",
+            "armToolchainPath": "/usr/bin",
+            "gdbPath": "/usr/bin/gdb-multiarch",
+            "svdFile": "${env:PICO_SDK_PATH}/src/rp2040/hardware_regs/rp2040.svd",
+            "overrideLaunchCommands": [
+                "monitor tpwr enable",
+                "monitor reset",
+                "monitor swdp_scan",
+                "attach 1", // Attach to core 0 (first core)
+                "set mem inaccessible-by-default off",
+                "load",
+                "break main",
+                "continue"
+            ],
+            "overrideRestartCommands": [
+                "monitor reset"
+            ],
+        },
+        {
+            "name": "BMP Debug Remote (Core 1 - External)",
+            "type": "cortex-debug",
+            "servertype": "external",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceRoot}/build/ProjectFiles/blink.elf",
+            "preLaunchTask": "CMake: build",
+            "interface": "swd",
+            "device": "RP2040",
+            "gdbTarget": "192.168.11.173:2000",
+            "runToEntryPoint": "main",
+            "showDevDebugOutput": "parsed",
+            "armToolchainPath": "/usr/bin",
+            "gdbPath": "/usr/bin/gdb-multiarch",
+            "svdFile": "${env:PICO_SDK_PATH}/src/rp2040/hardware_regs/rp2040.svd",
+            "overrideLaunchCommands": [
+                "monitor tpwr enable",
+                "monitor reset",
+                "monitor swdp_scan",
+                "attach 2", // Attach to core 1 (second core)
+                "set mem inaccessible-by-default off",
+                "load",
+                "break main",
+                "continue"
+            ],
+            "overrideRestartCommands": [
+                "monitor reset"
+            ],
+        },
+        {
+            "name": "BMP Debug Remote (Core 0)",
+            "type": "cortex-debug",
+            "servertype": "bmp",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceRoot}/build/ProjectFiles/blink.elf",
+            "preLaunchTask": "CMake: build",
+            "interface": "swd",
+            "device": "RP2040",
+            "BMPGDBSerialPort": "tcp:192.168.11.173:2000", // TCP connection to remote BMP
+            "runToEntryPoint": "main",
+            "showDevDebugOutput": "parsed",
+            "armToolchainPath": "/usr/bin",
+            "gdbPath": "/usr/bin/gdb-multiarch",
+            "svdFile": "${env:PICO_SDK_PATH}/src/rp2040/hardware_regs/rp2040.svd",
+            "powerOverBMP": "enable", // Enable target power
+            "targetId": 1, // Specify core 0 (first core)
+        },
+        {
+            "name": "BMP Debug Remote (Core 1)",
+            "type": "cortex-debug",
+            "servertype": "bmp",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceRoot}/build/ProjectFiles/blink.elf",
+            "preLaunchTask": "CMake: build",
+            "interface": "swd",
+            "device": "RP2040",
+            "BMPGDBSerialPort": "tcp:192.168.11.173:2000", // TCP connection to remote BMP
+            "runToEntryPoint": "main",
+            "showDevDebugOutput": "parsed",
+            "armToolchainPath": "/usr/bin",
+            "gdbPath": "/usr/bin/gdb-multiarch",
+            "svdFile": "${env:PICO_SDK_PATH}/src/rp2040/hardware_regs/rp2040.svd",
+            "powerOverBMP": "enable", // Enable target power
+            "targetId": 2, // Specify core 1 (second core)
+        },
+        {
             "name": "BMP Attach",
             "type": "cortex-debug",
             "servertype": "bmp",

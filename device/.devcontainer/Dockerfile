@@ -1,23 +1,38 @@
 FROM mcr.microsoft.com/devcontainers/base:bookworm
-RUN apt-get update
-RUN apt-get install -y gcc-arm-none-eabi
-RUN apt-get install -y gdb-multiarch
-RUN apt-get install -y cmake
-RUN apt-get install -y python3
-# RUN apt-get install -y python3-pip
-# RUN apt-get install -y python3-full
-# RUN apt-get install -y python3-protobuf
-# RUN apt-get install -y python3-grpcio
-# RUN apt-get install -y protobuf-compiler
-RUN apt-get install -y nanopb
-RUN apt-get install -y build-essential pkg-config libusb-1.0-0-dev
 
-# How do we want to install
-# - picotool
-# - protoc
-# - picosdk
-# - nanopb
-# - freertos
+# Update and install required packages
+RUN apt-get update && apt-get install -y \
+    gcc-arm-none-eabi \
+    gdb-multiarch \
+    cmake \
+    python3 \
+    nanopb \
+    build-essential \
+    pkg-config \
+    libusb-1.0-0-dev \
+    netcat-openbsd \
+    git \
+    && rm -rf /var/lib/apt/lists/*
 
-# WORKDIR /workspaces/app-uc-stack/device
-# RUN git submodule update --init --recursive
+# Download Pico SDK
+RUN git clone https://github.com/raspberrypi/pico-sdk.git /bin/pico-sdk && \
+    cd /bin/pico-sdk && \
+    git submodule update --init
+
+# Set Pico SDK path
+ENV PICO_SDK_PATH=/bin/pico-sdk
+
+# Download and build picotool
+RUN cd /bin && \
+    git clone https://github.com/raspberrypi/picotool.git picotool && \
+    cd picotool && \
+    mkdir build && \
+    cd build && \
+    cmake .. && \
+    make && \
+    make install
+
+# Set picotool path
+ENV picotool_DIR=/bin/picotool
+
+EXPOSE 2000

@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.13...3.27)
 message('Building Project!!!')
+message($ENV{PICO_SDK_PATH})
 
-include(deps/pico-sdk/pico_sdk_init.cmake)
+set(PICO_SDK_PATH "/bin/pico-sdk")
+include(${PICO_SDK_PATH}/pico_sdk_init.cmake)
 
 project(Pico-FreeRTOS)
 
