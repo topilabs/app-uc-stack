@@ -39,13 +39,13 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Werror -g -O0")
 include_directories(nanocobs)
 
 add_executable(
-        blink
+        out
         main.c
         nanocobs/cobs.c
 )
 
 target_link_libraries(
-        blink 
+        out 
         pico_stdlib 
         freertos 
         hardware_adc
@@ -53,7 +53,7 @@ target_link_libraries(
         nanopb
 )
 
-pico_enable_stdio_usb(blink 0)
-pico_enable_stdio_uart(blink 1)
+pico_enable_stdio_usb(out 0)
+pico_enable_stdio_uart(out 1)
 
-pico_add_extra_outputs(blink)
+pico_add_extra_outputs(out)
