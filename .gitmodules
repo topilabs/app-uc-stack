@@ -5,9 +5,9 @@
 [submodule "device/deps/nanopb"]
 	path = device/deps/nanopb
 	url = https://github.com/nanopb/nanopb.git
-[submodule "device/deps/pico-sdk"]
-	path = device/deps/pico-sdk
-	url = https://github.com/raspberrypi/pico-sdk.git
 [submodule "device/deps/nanocobs"]
 	path = device/deps/nanocobs
 	url = https://github.com/charlesnicholson/nanocobs.git
+[submodule "device/deps/libwebsockets"]
+	path = device/deps/libwebsockets
+	url = https://github.com/warmcat/libwebsockets.git
