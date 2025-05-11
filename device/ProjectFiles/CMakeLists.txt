@@ -1,4 +1,3 @@
-
 # Initialize nanopb
 set(NANOPB_PATH ${CMAKE_SOURCE_DIR}/deps/nanopb)
 # Add nanopb headers to include path for pb_encode.h, pb_decode.h, etc.
@@ -36,13 +35,9 @@ target_include_directories(proto_messages PUBLIC ${CMAKE_CURRENT_BINARY_DIR}/nan
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Werror -g -O0")
 
-# nanocobs is now in deps folder
-include_directories(${CMAKE_SOURCE_DIR}/deps/nanocobs)
-
 add_executable(
         out
         main.c
-        ${CMAKE_SOURCE_DIR}/deps/nanocobs/cobs.c
 )
 
 target_link_libraries(

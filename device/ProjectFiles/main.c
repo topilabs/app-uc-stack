@@ -12,8 +12,6 @@
 #include <pb_decode.h>
 #include "nanopb/message.pb.h"
 
-#include "nanocobs/cobs.h"
-
 static QueueHandle_t xQueue = NULL;
 
 #define UART_ID     uart0
@@ -79,12 +77,9 @@ void telemetry_task(void *pvParameters)
     // Init static vars for comms
     uint uiRecievedValue;
 
-    // Allocate buffers to hold the encoded message
-    #define bufferA_length  128
-    #define bufferB_length  128
-
-    uint8_t bufferA[bufferA_length];
-    uint8_t bufferB[bufferB_length];
+    // Allocate buffer to hold the encoded message
+    #define buffer_length  128
+    uint8_t buffer[buffer_length];
     size_t bytes_written;
     
     // Init UART
@@ -100,29 +95,8 @@ void telemetry_task(void *pvParameters)
         // printf("%s %u \n", "uiRecievedValue =", uiRecievedValue); // this would utilize built-in console
         
         // Encode message as binary using protobuf
-        prep_buf(uiRecievedValue, bufferA, bufferA_length, &bytes_written);
-
-        // Strip zeros
-        cobs_ret_t cobs_ret = cobs_encode(bufferA, bytes_written, bufferB, bufferB_length, &bytes_written);
-
-        switch (cobs_ret) {
-            case COBS_RET_SUCCESS:
-            // printf("cobs encode successful. sending...\n");
-            // printf(bufferB);
-            uart_write_blocking(UART_ID, bufferB, bytes_written);   // Send the data
-            // uart_putc(UART_ID, 0x0);                               // Send termination symbol
-            break;
-
-            case COBS_RET_ERR_BAD_ARG:
-            // printf("cobs error bad arg\n");
-            break;
-
-            case COBS_RET_ERR_EXHAUSTED:
-            // printf("cobs buffer overflow error\n");
-            break;
-            default:
-            // printf("cobs error\n");
-            break;
+        if (prep_buf(uiRecievedValue, buffer, buffer_length, &bytes_written)) {
+            uart_write_blocking(UART_ID, buffer, bytes_written);   // Send the data
         }
     }
 }
