@@ -1,0 +1,49 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.2 Chrome/134.0.6998.205 Electron/35.3.0 Safari/537.36" version="27.0.2">
+  <diagram name="Page-1" id="9m2aK87oULLGZVnvF24n">
+    <mxGraphModel dx="662" dy="641" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="VsGkRQAYCxxZElRvRI9Y-1" value="TinyUSB" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="260" y="250" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VsGkRQAYCxxZElRvRI9Y-2" value="Mongoose" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="620" y="250" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VsGkRQAYCxxZElRvRI9Y-3" value="FreeRTOS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="380" y="250" width="110" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="VsGkRQAYCxxZElRvRI9Y-4" value="LWIP" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="500" y="320" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VsGkRQAYCxxZElRvRI9Y-5" value="FreeRTOS TCP" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="500" y="390" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VsGkRQAYCxxZElRvRI9Y-6" value="Hardware - WIznet 5500 / LAN" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="260" y="320" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VsGkRQAYCxxZElRvRI9Y-7" value="Wireless Chip" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="260" y="390" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VsGkRQAYCxxZElRvRI9Y-8" value="libwebsockets" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="620" y="320" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VsGkRQAYCxxZElRvRI9Y-9" value="Mongoose" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="500" y="250" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VsGkRQAYCxxZElRvRI9Y-10" value="Network Interface" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="285" y="210" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VsGkRQAYCxxZElRvRI9Y-11" value="RTOS" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="405" y="210" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VsGkRQAYCxxZElRvRI9Y-12" value="Networking stack" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="525" y="210" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VsGkRQAYCxxZElRvRI9Y-13" value="Websocket stack" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="645" y="210" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

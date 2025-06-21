@@ -7,6 +7,13 @@ include(${PICO_SDK_PATH}/pico_sdk_init.cmake)
 
 project(Pico-FreeRTOS)
 
+# Enable USB stdio with CDC
+set(PICO_STDIO_USB_ENABLE 1)
+set(PICO_STDIO_UART_ENABLE 0)
+
+# Enable lwIP
+set(PICO_LWIP_ENABLE 1)
+
 pico_sdk_init()
 
 include_directories(
