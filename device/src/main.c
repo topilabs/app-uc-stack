@@ -5,12 +5,13 @@
 #include <string.h>
 
 #include "pico/stdlib.h"
-#include "hardware/gpio.h"
+#include "pico/cyw43_arch.h"
+#include "../config/lwipopts.h"
 #include "hardware/adc.h"
+#include "components/nanopb/message.pb.h"
 
 #include <pb_encode.h>
 #include <pb_decode.h>
-#include "nanopb/message.pb.h"
 
 static QueueHandle_t xQueue = NULL;
 
@@ -25,25 +26,29 @@ static QueueHandle_t xQueue = NULL;
 void adc_task(void *pvParameters)
 {   
     stdio_init_all();
-    
-    const uint LED_PIN = PICO_DEFAULT_LED_PIN;
+    if (cyw43_arch_init()) {
+        printf("Wi-Fi init failed");
+        return;  // Fixed: void function cannot return a value
+    }
+
+    const uint LED_PIN = CYW43_WL_GPIO_LED_PIN; // Use the built-in LED pin
     const uint KNOB_PIN = 26;
 
     uint uIValueToSend = 0;
-    gpio_init(LED_PIN);
-    gpio_set_dir(LED_PIN, GPIO_OUT);
+    // gpio_init(LED_PIN);
+    // gpio_set_dir(LED_PIN, GPIO_OUT);
 
     adc_init();
     adc_gpio_init(KNOB_PIN);
     adc_select_input(0);
     
     while (true) {
-        gpio_put(LED_PIN, 1);
+        cyw43_arch_gpio_put(LED_PIN, 1);
         uIValueToSend = adc_read();
         xQueueSend(xQueue, &uIValueToSend, 0U);
         vTaskDelay(10);
 
-        gpio_put(LED_PIN, 0);
+        cyw43_arch_gpio_put(LED_PIN, 0);
         uIValueToSend = adc_read();
         xQueueSend(xQueue, &uIValueToSend, 0U);
         vTaskDelay(10);

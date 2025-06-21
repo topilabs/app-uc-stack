@@ -1,6 +1,13 @@
 #ifndef FREERTOS_CONFIG_H
 #define FREERTOS_CONFIG_H
 
+/* Compatibility defines for Pico SDK with FreeRTOS V11.1.0 */
+#define portCHECK_IF_IN_ISR() 0
+#define INCLUDE_xSemaphoreGetMutexHolder 1
+
+/* Compatibility define for lwIP with newer FreeRTOS versions */
+#define portTICK_RATE_MS portTICK_PERIOD_MS
+
 /* Basic FreeRTOS definitions. */
 #define configUSE_PREEMPTION                    1
 #define configUSE_PORT_OPTIMISED_TASK_SELECTION 0

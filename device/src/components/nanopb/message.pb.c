@@ -7,6 +7,3 @@
 #endif
 
 PB_BIND(DataPackage, DataPackage, AUTO)
-
-
-
