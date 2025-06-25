@@ -4,11 +4,9 @@
             "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/ProjectFiles/nanopb",
-                "${workspaceFolder}/freertos/**",
-                "${workspaceFolder}/freertos/FreeRTOS-Kernel/include",
-                "${env:PICO_SDK_PATH}/**",
-                "${env:NANOPB_PATH}/**"
+                "${workspaceFolder}/deps/**",
+                "${workspaceFolder}/config/**",
+                "${workspaceFolder}/src/**"
             ],
             "compilerPath": "/usr/bin/gcc",
             "cStandard": "c17",
