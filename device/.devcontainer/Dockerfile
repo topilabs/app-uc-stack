@@ -14,25 +14,25 @@ RUN apt-get update && apt-get install -y \
     git \
     && rm -rf /var/lib/apt/lists/*
 
-# Download Pico SDK
-RUN git clone https://github.com/raspberrypi/pico-sdk.git /bin/pico-sdk && \
-    cd /bin/pico-sdk && \
-    git submodule update --init
 
-# Set Pico SDK path
-ENV PICO_SDK_PATH=/bin/pico-sdk
-
-# Download and build picotool
-RUN cd /bin && \
-    git clone https://github.com/raspberrypi/picotool.git picotool && \
+# Download pico-sdk temporarily, build picotool, then clean up
+RUN mkdir -p /tmp/pico-build && \
+    cd /tmp/pico-build && \
+    # Clone and setup pico-sdk
+    git clone https://github.com/raspberrypi/pico-sdk.git && \
+    cd pico-sdk && \
+    git submodule update --init && \
+    cd .. && \
+    # Clone and build picotool with the temporary SDK
+    git clone https://github.com/raspberrypi/picotool.git && \
     cd picotool && \
     mkdir build && \
     cd build && \
-    cmake .. && \
+    cmake -DPICO_SDK_PATH=/tmp/pico-build/pico-sdk .. && \
     make && \
-    make install
-
-# Set picotool path
-ENV picotool_DIR=/bin/picotool
+    make install && \
+    # Clean up temporary files
+    cd / && \
+    rm -rf /tmp/pico-build
 
 EXPOSE 2000

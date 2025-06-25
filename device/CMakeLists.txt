@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.13)
 
 # Set Pico platform and board
-set(PICO_PLATFORM "rp2350")
+set(PICO_PLATFORM "rp2350-arm-s")
 set(PICO_BOARD "pico2_w")
 
-# Set Pico SDK path
-set(PICO_SDK_PATH "/usr/bin/pico-sdk")
+# Set Pico SDK path to our local copy
+set(PICO_SDK_PATH "${CMAKE_SOURCE_DIR}/deps/pico-sdk")
 include(${PICO_SDK_PATH}/pico_sdk_init.cmake)
 
 # Set FreeRTOS Kernel path to our local copy
