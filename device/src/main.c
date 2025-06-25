@@ -13,6 +13,10 @@
 #include <pb_encode.h>
 #include <pb_decode.h>
 
+#include "components/mongoose/mongoose.h"
+#include "components/mongoose/net.h"
+#include "wifi.h"
+
 static QueueHandle_t xQueue = NULL;
 
 #define UART_ID     uart0
@@ -26,11 +30,8 @@ static QueueHandle_t xQueue = NULL;
 void adc_task(void *pvParameters)
 {   
     stdio_init_all();
-    if (cyw43_arch_init()) {
-        printf("Wi-Fi init failed");
-        return;  // Fixed: void function cannot return a value
-    }
-
+    cyw43_arch_init();
+    
     const uint LED_PIN = CYW43_WL_GPIO_LED_PIN; // Use the built-in LED pin
     const uint KNOB_PIN = 26;
 
@@ -43,12 +44,12 @@ void adc_task(void *pvParameters)
     adc_select_input(0);
     
     while (true) {
-        cyw43_arch_gpio_put(LED_PIN, 1);
+        cyw43_arch_gpio_put(LED_PIN, true);
         uIValueToSend = adc_read();
         xQueueSend(xQueue, &uIValueToSend, 0U);
         vTaskDelay(10);
 
-        cyw43_arch_gpio_put(LED_PIN, 0);
+        cyw43_arch_gpio_put(LED_PIN, false);
         uIValueToSend = adc_read();
         xQueueSend(xQueue, &uIValueToSend, 0U);
         vTaskDelay(10);
@@ -106,12 +107,34 @@ void telemetry_task(void *pvParameters)
     }
 }
 
+static void mongoose(void *args) {
+  struct mg_mgr mgr;        // Initialise Mongoose event manager
+  mg_mgr_init(&mgr);        // and attach it to the interface
+  mg_log_set(MG_LL_DEBUG);  // Set log level
+
+  cyw43_arch_init();
+  cyw43_arch_enable_sta_mode();
+  cyw43_arch_wifi_connect_blocking(WIFI_SSID, WIFI_PASS, CYW43_AUTH_WPA2_AES_PSK);
+
+  MG_INFO(("Initialising application..."));
+  web_init(&mgr);
+
+  MG_INFO(("Starting event loop"));
+  for (;;) {
+    mg_mgr_poll(&mgr, 10);
+  }
+
+  (void) args;
+}
+
+
 int main()
 {
     stdio_init_all();
 
     xQueue = xQueueCreate(1, sizeof(uint));
 
+    xTaskCreate(mongoose, "mongoose", 2048, 0, configMAX_PRIORITIES - 1, NULL);
     xTaskCreate(adc_task, "ADC_Task", 256, NULL, 1, NULL);
     xTaskCreate(telemetry_task, "telemetry_Task", 256, NULL, 1, NULL);
     // recieve commands

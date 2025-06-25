@@ -102,7 +102,7 @@
 #define configMAX_API_CALL_INTERRUPT_PRIORITY   [dependent on processor and application]
 */
 
-#define configNUMBER_OF_CORES                   1
+#define configNUMBER_OF_CORES                   2
 /* SMP (configNUMBER_OF_CORES > 1) only */
 #define configTICK_CORE                         0
 #define configRUN_MULTIPLE_PRIORITIES           1

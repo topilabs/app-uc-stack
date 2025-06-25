@@ -42,6 +42,26 @@
             "targetId": 2, // Specify core 1 (second core)
         },
         {
+            "name": "BMP Debug USB (Core 0)",
+            "type": "cortex-debug",
+            "servertype": "bmp",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceRoot}/build/src/firmware.elf",
+            // "preLaunchTask": "CMake: build",
+            "interface": "swd",
+            // "device": "RP2040",
+            "device": "RP2350",
+            "BMPGDBSerialPort": "/dev/cu.usbmodem97B6B71B1", // TCP connection to remote BMP
+            "runToEntryPoint": "main",
+            "showDevDebugOutput": "parsed",
+            "armToolchainPath": "/opt/homebrew/bin",
+            "gdbPath": "/opt/homebrew/bin/arm-none-eabi-gdb",
+            "svdFile": "${env:PICO_SDK_PATH}/src/rp2350/hardware_regs/rp2350.svd",
+            "powerOverBMP": "enable", // Enable target power
+            "targetId": 1, // Specify core 0 (first core)
+        },
+        {
             "name": "BMP Attach (Core 0)",
             "type": "cortex-debug",
             "servertype": "bmp",
