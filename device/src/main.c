@@ -13,6 +13,7 @@
 #include <pb_encode.h>
 #include <pb_decode.h>
 
+#include "components/mongoose/mongoose_config.h"
 #include "components/mongoose/mongoose.h"
 #include "components/mongoose/net.h"
 #include "wifi.h"
